@@ -654,7 +654,7 @@ button {
 }
 
 .timeline-item:nth-child(odd) .timeline-tags {
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 .tech-tag {
@@ -956,5 +956,185 @@ button {
 
     .timeline-item:nth-child(odd) .timeline-tags {
         justify-content: flex-start;
+    }
+}
+
+/* ===================================
+   Pricing Section
+   =================================== */
+
+.pricing-section {
+    padding: 8rem 0;
+}
+
+.section-subtitle {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.pricing-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-light);
+    border-radius: 24px;
+    padding: 2.5rem;
+    transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-primary);
+}
+
+/* Wyróżnienie środkowej karty (Popular) */
+.pricing-card.popular {
+    border-color: var(--accent-primary);
+    background: linear-gradient(180deg, var(--accent-glow) 0%, var(--bg-surface) 100%);
+    box-shadow: 0 0 0 1px var(--accent-primary); /* Podwójna ramka */
+}
+
+.badge-popular {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--accent-primary);
+    color: white; /* Ustawione na sztywno, bo na niebieskim tle tekst musi być biały */
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.pricing-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    font-family: var(--font-heading);
+    color: var(--text-primary);
+}
+
+.pricing-price .currency {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-tertiary);
+    vertical-align: super;
+}
+
+.pricing-desc {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
+}
+
+.pricing-features {
+    flex-grow: 1;
+    margin-bottom: 2rem;
+}
+
+.pricing-features li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.pricing-features .check {
+    color: var(--accent-primary);
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.full-width {
+    width: 100%;
+}
+
+/* Sekcja Maintenance */
+.pricing-maintenance {
+    background-color: var(--bg-surface);
+    border: 1px dashed var(--border-light);
+    border-radius: 16px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.maintenance-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.maintenance-content p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+.link-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent-primary);
+    font-weight: 600;
+    transition: gap 0.2s ease;
+}
+
+.link-arrow:hover {
+    gap: 0.75rem;
+}
+
+.link-arrow::after {
+    content: '→';
+}
+
+/* ===================================
+   Custom Adjustments
+   =================================== */
+
+/* Reorder Pricing Cards on Desktop (Start package in the middle) */
+@media (min-width: 901px) {
+    .pricing-grid .pricing-card:nth-child(1) { order: 2; } /* Start/Popular -> Middle */
+    .pricing-grid .pricing-card:nth-child(2) { order: 1; } /* Firma -> Left */
+    .pricing-grid .pricing-card:nth-child(3) { order: 3; } /* Custom -> Right */
+}
+
+/* Fix "Indywidualnie" text overflow */
+.pricing-grid .pricing-card:nth-child(3) .pricing-price {
+    font-size: 2rem;
+    word-break: break-all; /* Ensure it doesn't break layout on very small screens */
+}
+@media (max-width: 380px) {
+    .pricing-grid .pricing-card:nth-child(3) .pricing-price {
+        font-size: 1.6rem;
     }
 }
