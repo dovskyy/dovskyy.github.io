@@ -328,7 +328,7 @@ document.querySelectorAll('a[target="_blank"]').forEach((link) => {
 
 console.log('%c👋 Cześć!', 'font-size: 2em; color: #D4855F; font-weight: bold;');
 console.log(
-    '%cLooking at the code? Świetnie!\nTen portfolio zostało zbudowane z wykorzystaniem czystego HTML, CSS i JavaScript.\nZainteresowany współpracą? Skontaktuj się: marcel@dovskyy.me',
+    '%cPodglądasz kod? Super!\nTa strona firmowa jest zbudowana w czystym HTML, CSS i JavaScript.\nMasz pytanie lub chcesz współpracować? Napisz: marcel@dovskyy.me',
     'font-size: 1em; color: #5A5A5A; line-height: 1.5;'
 );
 
@@ -337,7 +337,7 @@ console.log(
 // ===================================
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Portfolio loaded successfully ✓');
+    console.log('Strona załadowana ✓');
     trackPageView();
 
     // Set initial skill bar widths to 0 for animation
