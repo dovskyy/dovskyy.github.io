@@ -264,6 +264,13 @@ button {
     letter-spacing: -0.03em;
 }
 
+.footer-logo {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: -0.03em;
+}
+
 .nav-links {
     display: flex;
     gap: 2rem;
@@ -315,10 +322,10 @@ button {
 /* Background blob/glow effect */
 .hero-background-glow {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: -6%;
+    left: 70%;
     transform: translate(-50%, -50%);
-    width: 60vw;
+    width: 105vw;
     height: 60vw;
     background: radial-gradient(
             circle,
@@ -376,7 +383,6 @@ button {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    display: inline-block;
     filter: drop-shadow(0 0 30px rgba(124, 58, 237, 0.15)); /* Subtle glow behind text */
 }
 
@@ -455,6 +461,7 @@ button {
 .hero-photo:hover {
     filter: grayscale(0%);
 }
+
 
 /* ===================================
    6. About Section
@@ -546,6 +553,11 @@ button {
 
 [data-theme="dark"] .skills {
     background-color: var(--bg-surface);
+}
+
+/* Fix section number visibility in skills section */
+.skills .section-number {
+    z-index: 0;
 }
 
 
@@ -1006,6 +1018,10 @@ button {
         margin-bottom: 0.5rem;
     }
 
+    .footer-logo {
+        margin-bottom: 0.5rem;
+    }
+
     .theme-toggle {
         position: absolute;
         top: 1rem;
@@ -1092,6 +1108,11 @@ button {
 
     .timeline-item:nth-child(odd) .timeline-tags {
         justify-content: flex-start;
+    }
+
+    /* Hero photo - reduce size by 25% on mobile */
+    .hero-photo {
+        max-width: 300px;
     }
 }
 
