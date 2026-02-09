@@ -192,57 +192,7 @@ if (window.innerWidth > 768) {
     });
 }
 
-// ===================================
-// Scroll Indicator Hide on Scroll
-// ===================================
 
-const scrollIndicator = document.querySelector('.scroll-indicator');
-
-if (scrollIndicator) {
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 200) {
-            scrollIndicator.style.opacity = '0';
-            scrollIndicator.style.pointerEvents = 'none';
-        } else {
-            scrollIndicator.style.opacity = '1';
-            scrollIndicator.style.pointerEvents = 'auto';
-        }
-    });
-}
-
-// ===================================
-// Copy Email to Clipboard
-// ===================================
-
-const emailLink = document.querySelector('.contact-link[href^="mailto:"]');
-
-if (emailLink) {
-    emailLink.addEventListener('click', (e) => {
-        e.preventDefault();
-        const email = emailLink.getAttribute('href').replace('mailto:', '');
-
-        // Create temporary input to copy email
-        const tempInput = document.createElement('input');
-        tempInput.value = email;
-        document.body.appendChild(tempInput);
-        tempInput.select();
-        document.execCommand('copy');
-        document.body.removeChild(tempInput);
-
-        // Show feedback
-        const originalText = emailLink.querySelector('span').textContent;
-        emailLink.querySelector('span').textContent = 'Email skopiowany!';
-
-        setTimeout(() => {
-            emailLink.querySelector('span').textContent = originalText;
-        }, 2000);
-
-        // Also open email client
-        setTimeout(() => {
-            window.location.href = `mailto:${email}`;
-        }, 500);
-    });
-}
 
 // ===================================
 // Keyboard Navigation
@@ -268,7 +218,6 @@ document.addEventListener('keydown', (e) => {
 
 // Debounce scroll events
 let scrollTimeout;
-const originalScrollHandler = window.onscroll;
 
 window.addEventListener('scroll', () => {
     if (scrollTimeout) {
