@@ -88,68 +88,77 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="hero">
+    <header class="hero" id="home">
         <div class="hero-background-glow"></div>
         <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-label fade-in">Web Developer & SEO Specialist</div>
-                <h1 class="hero-title fade-in-up">
-                    Marcel <span class="hero-title-accent">Lewandowski</span>
+            <div class="hero-content fade-in-up">
+                <div class="hero-label">Marcel Lewandowski</div>
+                <h1 class="hero-title">
+                    Tworzę strony,<br>
+                    <span class="hero-title-accent">które zapadają w pamięć.</span>
                 </h1>
-                <p class="hero-subtitle fade-in-up">
-                    Pomagam firmom rosnąć w sieci. Tworzę szybkie strony WWW i skuteczne treści, które budują zaufanie klientów.
+                <p class="hero-subtitle">
+                    Nazywam się Marcel. Pomagam firmom i twórcom budować nowoczesną obecność w sieci.
+                    Jako inżynier oprogramowania dbam o to, by Twoja strona była nie tylko estetyczna,
+                    ale też szybka, bezpieczna i niezawodna.
                 </p>
-                <div class="hero-cta fade-in-up">
-                    <a href="#contact" class="btn btn-primary">Darmowa Wycena</a>
-                    <a href="#projects" class="btn btn-secondary">Zobacz Proces</a>
-                </div>
-                <div class="hero-socials fade-in-up">
-                     <!-- Social links can go here or remain in footer/contact -->
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Darmowa wycena</a>
+                    <a href="#projects" class="btn btn-secondary">Zobacz moje prace</a>
                 </div>
             </div>
-            <div class="hero-decoration">
+
+            <div class="hero-decoration fade-in-up">
                 <div class="image-wrapper">
-                    <img class="hero-photo" src="assets/marcel-lewandowski.jpg" alt="Marcel Lewandowski" loading="lazy">
+                    <img src="assets/marcel-lewandowski.jpg" alt="Marcel Lewandowski" class="hero-photo">
+                </div>
+
+                <!-- Floating badges (Decoration) -->
+                <div class="scroll-indicator">
+                    <span>Scroll</span>
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M7 13l5 5 5-5M7 6l5 5 5-5"></path>
+                    </svg>
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <span>Przewiń w dół</span>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="6 9 12 15 18 9"/>
-            </svg>
-        </div>
-    </section>
+    </header>
 
     <!-- About Section -->
     <section class="about" id="about">
-        <div class="container">
+        <div class="container ">
             <div class="section-header">
                 <span class="section-number">01</span>
                 <h2 class="section-title reveal">O mnie</h2>
             </div>
-            <div class="about-content">
-                <div class="about-text reveal">
+
+            <div class="about-content reveal">
+                <div class="about-text">
                     <p class="lead">
                         Pomagam firmom budować skuteczne strony WWW, które sprzedają i budują wiarygodność.
                     </p>
                     <p>
-                        Tworzę nowoczesne strony internetowe, treści marketingowe oraz pomagam z SEO i wizytówkami Google.
-                        Projektuję rozwiązania, które wspierają cele biznesowe i są czytelne dla Twoich klientów.
+                        Tworzę nowoczesne strony internetowe, treści marketingowe oraz pomagam z SEO i wizytówkami Google. Projektuję rozwiązania, które wspierają cele biznesowe i są czytelne dla Twoich klientów.
+
+                        Doświadczenie zdobyte w codziennej pracy jako programista przekładam na jakość, proces i dbałość o detale. W praktyce oznacza to uporządkowany przebieg prac, dobrą komunikację i stabilne wdrożenie.
                     </p>
                     <p>
-                        Doświadczenie zdobyte w Visa przekładam na jakość, proces i dbałość o detale.
-                        W praktyce oznacza to uporządkowany przebieg prac, dobrą komunikację i stabilne wdrożenie.
+                        Wierzę, że strona internetowa to wizytówka, która pracuje dla Ciebie 24/7.
                     </p>
                 </div>
-                <div class="about-stats reveal">
+
+                <div class="about-stats">
                     <div class="stat-card">
-                        <div class="stat-number">3+</div>
+                        <div class="stat-number">4+</div>
                         <div class="stat-label">Lata doświadczenia</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number">Visa</div>
-                        <div class="stat-label">Doświadczenie enterprise</div>
+                        <div class="stat-number">25+</div>
+                        <div class="stat-label">Zrealizowanych projektów</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">UX/UI</div>
+                        <div class="stat-label">Nowoczesne standardy designu</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-number">SEO</div>
@@ -211,61 +220,159 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
+    <!-- Process / Timeline Section -->
+    <section class="timeline-section" id="projects">
         <div class="container">
             <div class="section-header">
                 <span class="section-number">03</span>
                 <h2 class="section-title reveal">Proces współpracy</h2>
             </div>
-            <div class="projects-grid">
-                <article class="project-card reveal">
-                    <div class="project-number">01</div>
-                    <div class="project-content">
-                        <h3 class="project-title">Poznajemy Twoją firmę</h3>
-                        <p class="project-description">
+
+            <div class="timeline">
+                <!-- Step 1 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Krok 01</div>
+                        <h3 class="timeline-title">Poznajemy Twoją firmę</h3>
+                        <p class="timeline-description">
                             Rozmawiamy o celach, odbiorcach i tym, co ma robić strona. Na tym etapie
-                            układamy strukturę i priorytety, żeby wszystko miało sens biznesowo.
+                            układamy strukturę i priorytety, żeby wszystko miało sens biznesowo. Zbieramy też niezbędne materiały.
                         </p>
-                        <div class="project-stack">
+                        <div class="timeline-tags">
                             <span class="tech-tag">brief</span>
                             <span class="tech-tag">cele biznesowe</span>
                             <span class="tech-tag">mapa strony</span>
                         </div>
                     </div>
-                </article>
+                </div>
 
-                <article class="project-card reveal">
-                    <div class="project-number">02</div>
-                    <div class="project-content">
-                        <h3 class="project-title">Projekt + treści</h3>
-                        <p class="project-description">
-                            Tworzę wygląd i układ, a następnie dopasowuję treści marketingowe. Wszystko
-                            jest nastawione na czytelność, zaufanie i konwersję.
+                <!-- Step 2 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Krok 02</div>
+                        <h3 class="timeline-title">Projekt + treści</h3>
+                        <p class="timeline-description">
+                            Tworzę unikalny wygląd i układ, a następnie dopasowuję treści marketingowe. Wszystko
+                            jest nastawione na czytelność, budowanie zaufania i wysoką konwersję.
                         </p>
-                        <div class="project-stack">
+                        <div class="timeline-tags">
                             <span class="tech-tag">UX/UI</span>
                             <span class="tech-tag">copywriting</span>
-                            <span class="tech-tag">SEO podstawowe</span>
+                            <span class="tech-tag">SEO on-page</span>
                         </div>
                     </div>
-                </article>
+                </div>
 
-                <article class="project-card reveal">
-                    <div class="project-number">03</div>
-                    <div class="project-content">
-                        <h3 class="project-title">Wdrożenie i rozwój</h3>
-                        <p class="project-description">
-                            Publikujemy stronę, konfigurujemy narzędzia i sprawdzamy, jak działa w praktyce.
-                            Jeśli potrzeba, rozwijamy dodatkowe funkcje lub aplikacje webowe.
+                <!-- Step 3 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Krok 03</div>
+                        <h3 class="timeline-title">Wdrożenie i rozwój</h3>
+                        <p class="timeline-description">
+                            Publikujemy stronę, konfigurujemy narzędzia analityczne i sprawdzamy działanie w praktyce.
+                            Strona jest szybka, bezpieczna i gotowa na przyjęcie klientów. Możemy też rozwijać nowe funkcje.
                         </p>
-                        <div class="project-stack">
+                        <div class="timeline-tags">
                             <span class="tech-tag">wdrożenie</span>
                             <span class="tech-tag">monitoring</span>
-                            <span class="tech-tag">dodatki webowe</span>
+                            <span class="tech-tag">wsparcie</span>
                         </div>
                     </div>
-                </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">FAQ</span>
+                <h2 class="section-title reveal">Częste pytania</h2>
+            </div>
+
+            <div class="faq-grid reveal">
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Ile kosztuje strona internetowa?</span>
+                        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>
+                            To zależy od skali projektu. Prosta wizytówka (One Page) to inwestycja od 1500 PLN.
+                            Rozbudowane strony firmowe z systemem zarządzania treścią (CMS) zaczynają się od 2500 PLN.
+                            Każdy projekt wyceniam indywidualnie po krótkiej rozmowie o Twoich potrzebach.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Dlaczego warto zatrudnić programistę zamiast agencji?</span>
+                        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>
+                            Współpracując ze mną, rozmawiasz bezpośrednio z twórcą, a nie z account managerem.
+                            Proces jest szybszy, komunikacja bezpośrednia, a budżet idzie w jakość kodu,
+                            a nie w utrzymanie biura agencji. Dodatkowo, jako senior developer,
+                            gwarantuję jakość techniczną często nieosiągalną dla masowych "fabryk stron".
+                        </p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Czy będę mógł samodzielnie edytować stronę?</span>
+                        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>
+                            Tak. Jeśli potrzebujesz często zmieniać treści, wdrażam lekki i intuicyjny system CMS
+                            (np. WordPress lub rozwiązania Headless). Przeszkolę Cię z obsługi – to zajmie max 30 minut.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Ile trwa realizacja?</span>
+                        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>
+                            Prosty Landing Page jestem w stanie dostarczyć w 3-5 dni roboczych od otrzymania materiałów.
+                            Pełna strona firmowa to zazwyczaj 2-3 tygodnie pracy.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Co to znaczy "standardy Enterprise"?</span>
+                        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>
+                            Oznacza to, że nie używam gotowców marnej jakości. Stosuję system kontroli wersji (Git),
+                            dbam o backupy, optymalizuję grafiki, zabezpieczam formularze przed spamem i piszę kod,
+                            który łatwo rozwijać w przyszłości. Buduję stronę tak, jak buduje się systemy bankowe – bezpiecznie i solidnie.
+                        </p>
+                    </div>
+                </details>
             </div>
         </div>
     </section>
@@ -319,7 +426,7 @@
         <div class="container">
             <div class="footer-content">
                 <p>&copy; 2026 Marcel Lewandowski. Wszystkie prawa zastrzeżone.</p>
-                <p class="footer-note">Zaprojektowane i zbudowane z wykorzystaniem HTML, CSS i JavaScript</p>
+                <p class="footer-note">Bydgoszcz, Polska</p>
             </div>
         </div>
     </footer>

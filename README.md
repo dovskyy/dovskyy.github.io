@@ -308,10 +308,11 @@ MIT License - możesz swobodnie używać tego kodu dla swoich projektów.
 
 ## 🤝 Kontakt
 
-Marcel Dovský
+Marcel Lewandowski
 - Email: marcel@dovskyy.me
 - GitHub: [@dovskyy](https://github.com/dovskyy)
-- LinkedIn: [Marcel Dovský](https://linkedin.com/in/marcel-dovský)
+- LinkedIn: [Marcel Lewandowski](https://linkedin.com/in/marcel-lewandowski)
+- Strona: [dovskyy.me](https://dovskyy.me)
 
 ---
 
