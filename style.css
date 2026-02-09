@@ -1019,6 +1019,7 @@ button {
     border-radius: 9999px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    text-align: center;
 }
 
 .pricing-header {

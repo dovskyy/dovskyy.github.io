@@ -92,7 +92,18 @@ const revealObserver = new IntersectionObserver(
     (entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
+                // Fix for elements with conflicting transitions (like pricing cards)
+                // We force the reveal transition duration to match the CSS variable --ease-out
+                entry.target.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+
                 entry.target.classList.add('active');
+
+                // Remove the inline transition after animation completes
+                // so original CSS transitions (e.g. for hover) take over
+                setTimeout(() => {
+                    entry.target.style.transition = '';
+                }, 800);
+
                 // Unobserve after reveal for performance
                 revealObserver.unobserve(entry.target);
             }
