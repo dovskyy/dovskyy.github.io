@@ -160,6 +160,7 @@ html {
     scroll-behavior: smooth;
     font-size: 16px;
     -webkit-text-size-adjust: 100%;
+    overflow-x: hidden; /* Dodatkowe zabezpieczenie przed scrollowaniem na boki */
 }
 
 body {
@@ -170,6 +171,7 @@ body {
     overflow-x: hidden;
     transition: background-color 0.3s ease, color 0.3s ease;
     -webkit-font-smoothing: antialiased;
+    width: 100%; /* Upewnienie się, że body nie wykracza poza viewport */
 }
 
 h1, h2, h3, h4, h5 {
@@ -1463,6 +1465,19 @@ textarea.form-control {
     /* Hero photo - reduce size by 25% on mobile */
     .hero-photo {
         max-width: 300px;
+    }
+
+    /* Fix for blobs and particles causing horizontal overflow on mobile */
+    .blob-1, .blob-2, .blob-3, .tech-particle {
+        display: none;
+    }
+
+    .hero-background-glow {
+        width: 100vw;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        filter: blur(40px);
+        opacity: 0.8;
     }
 }
 
