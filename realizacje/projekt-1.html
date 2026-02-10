@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt - Nazwa Realizacji | lewcode</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .project-details {
+            padding: 120px 0 80px;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            color: var(--accent-primary);
+            font-weight: 600;
+        }
+        .project-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+        .project-header-info h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        .project-meta {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .meta-item h4 {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            color: var(--text-tertiary);
+            margin-bottom: 0.5rem;
+        }
+        .meta-item p {
+            font-weight: 600;
+        }
+        .project-demo-frame {
+            width: 100%;
+            height: 600px;
+            border: 1px solid var(--border-light);
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            background: var(--bg-surface);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @media (max-width: 900px) {
+            .project-hero {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .project-header-info h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body data-theme="dark"> <!-- Defaulting to dark for demo, script should handle sync if needed -->
+    <div class="bg-grid-pattern"></div>
+    
+    <nav class="nav scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">.lewcode</a>
+            <a href="../index.html#portfolio" class="btn btn-secondary">Wróć do portfolio</a>
+        </div>
+    </nav>
+
+    <main class="project-details">
+        <div class="container">
+            <a href="../index.html#portfolio" class="back-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Powrót
+            </a>
+
+            <div class="project-hero">
+                <div class="project-header-info">
+                    <span class="portfolio-category">Case Study / Strona WWW</span>
+                    <h1>Nazwa Projektu</h1>
+                    <p class="lead">Kompleksowe wdrożenie strony firmowej z naciskiem na szybkość ładowania i konwersję.</p>
+                    
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <h4>Klient</h4>
+                            <p>Nazwa Firmy Sp. z o.o.</p>
+                        </div>
+                        <div class="meta-item">
+                            <h4>Usługa</h4>
+                            <p>Web Design & SEO</p>
+                        </div>
+                        <div class="meta-item">
+                            <h4>Data</h4>
+                            <p>Styczeń 2026</p>
+                        </div>
+                        <div class="meta-item">
+                            <h4>Technologie</h4>
+                            <p>Vanilla JS, HTML5, CSS3</p>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 3rem;">
+                        <a href="https://example.com" target="_blank" class="btn btn-primary">Zobacz live demo</a>
+                    </div>
+                </div>
+
+                <div class="project-description">
+                    <h3 style="margin-bottom: 1rem;">O projekcie</h3>
+                    <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">
+                        Głównym celem projektu było odświeżenie wizerunku firmy w sieci oraz poprawa wyników w wyszukiwarce Google. Klient borykał się z wolno działającą stroną na WordPressie, która nie przynosiła oczekiwanych leadów.
+                    </p>
+                    <h3 style="margin-bottom: 1rem;">Rozwiązanie</h3>
+                    <p style="color: var(--text-secondary);">
+                        Zdecydowaliśmy się na porzucenie ciężkich frameworków na rzecz czystego kodu. Dzięki temu czas ładowania strony spadł poniżej 1 sekundy, co bezpośrednio przełożyło się na niższy współczynnik odrzuceń i lepszą widoczność SEO.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-demo-preview">
+                <h2 style="margin-bottom: 2rem; text-align: center;">Podgląd realizacji</h2>
+                <div class="project-demo-frame">
+                    <!-- Tu można wstawić iframe lub duży screenshot -->
+                    <p style="color: var(--text-tertiary);">[ Tu znajdzie się interaktywny podgląd lub galeria zdjęć ]</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Marcel Lewandowski. Wszystkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Sync theme with localStorage
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+</body>
+</html>
