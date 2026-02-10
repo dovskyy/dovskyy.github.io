@@ -1236,6 +1236,19 @@ button {
     margin-left: 0.5rem;
 }
 
+.form-label-hint {
+    font-weight: 400;
+    color: var(--text-muted, #999);
+    font-size: 0.8rem;
+}
+
+.form-response-time {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-muted, #999);
+    margin-top: 0.75rem;
+}
+
 .form-control {
     width: 100%;
     padding: 0.875rem 1.25rem;
