@@ -222,6 +222,67 @@ document.querySelectorAll('a[target="_blank"]').forEach((link) => {
 });
 
 // ===================================
+// Contact Form Handling
+// ===================================
+
+const contactForm = document.querySelector('.contact-form');
+const contactSuccess = document.getElementById('contact-success');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.textContent;
+        
+        // Show loading state
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Wysyłanie...';
+        
+        const formData = new FormData(contactForm);
+        
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (response.ok) {
+                // Success
+                contactForm.style.display = 'none';
+                contactSuccess.style.display = 'block';
+                contactForm.reset();
+                trackEvent('Contact Form', 'Submission', 'Success');
+            } else {
+                // Error from server
+                const data = await response.json();
+                throw new Error(data.error || 'Wystąpił błąd podczas wysyłania.');
+            }
+        } catch (error) {
+            console.error('Form error:', error);
+            alert('Ups! Wystąpił błąd: ' + error.message);
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalBtnText;
+        }
+    });
+}
+
+function resetForm() {
+    if (contactForm && contactSuccess) {
+        contactSuccess.style.display = 'none';
+        contactForm.style.display = 'flex';
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Wyślij zapytanie';
+        }
+    }
+}
+
+// ===================================
 // Console Easter Egg
 // ===================================
 

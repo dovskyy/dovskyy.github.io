@@ -533,20 +533,36 @@
                 <h2 class="section-title reveal">Kontakt</h2>
             </div>
             <div class="contact-content reveal">
-                <div class="contact-text">
-                    <p class="lead">
-                        Chcesz stronę, która napędza sprzedaż i buduje zaufanie?
-                    </p>
-                    <p>
-                        Skontaktuj się ze mną, a przygotuję wstępną wycenę i plan działania. Odpowiem najszybciej jak to możliwe, zwykle w ciągu 24 godzin. Nie musisz mieć gotowego briefu – wystarczy, że napiszesz, czym się zajmujesz i czego oczekujesz od strony. Razem ustalimy, co będzie najlepsze dla Twojego biznesu.
-
-                    </p>
-                    <br>
-                    <p>
-                        W przypadku każdej realizacji możliwe spotkanie online, a jeśli jesteś z Bydgoszczy lub okolic i masz do realizacji coś większego – chętnie spotkam się osobiście.
-                    </p>
+                <div class="contact-form-container">
+                    <form action="https://formspree.io/f/TWÓJ_ID_FORMSPREE" method="POST" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email" class="form-label">Twój e-mail</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Numer telefonu</label>
+                                <input type="tel" id="phone" name="phone" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Twoja wiadomość</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" placeholder="Opisz krótko swoją firmę, czym się zajmujesz oraz jakie masz oczekiwania względem nowej strony..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary full-width">Wyślij zapytanie</button>
+                    </form>
+                    <div id="contact-success" class="form-success-message" style="display: none;">
+                        <div class="success-icon">✓</div>
+                        <h3>Dziękuję za wiadomość!</h3>
+                        <p>Odezwię się do Ciebie najszybciej jak to możliwe (zazwyczaj w ciągu 24h).</p>
+                        <button type="button" class="btn btn-secondary" onclick="resetForm()">Wyślij kolejną</button>
+                    </div>
                 </div>
                 <div class="contact-links">
+                    <div class="contact-text-brief">
+                        <p class="lead">Potrzebujesz miejsca w sieci, które sprzedaje i buduje zaufanie?</p>
+                        <p>Przygotuję dla Ciebie plan i wycenę w 24h, ty jedynie opisz swoje potrzeby. Możemy też spotkać się online lub osobiście na terenie Bydgoszczy i okolic.</p>
+                    </div>
                     <a href="mailto:kontakt@lewcode.pl" class="contact-link">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
