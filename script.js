@@ -120,37 +120,6 @@ revealElements.forEach((element) => {
 });
 
 // ===================================
-// Skill Bar Animation on Scroll
-// ===================================
-
-const skillBars = document.querySelectorAll('.skill-progress');
-let skillsAnimated = false;
-
-const skillObserver = new IntersectionObserver(
-    (entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting && !skillsAnimated) {
-                skillsAnimated = true;
-                skillBars.forEach((bar, index) => {
-                    setTimeout(() => {
-                        bar.style.width = bar.style.getPropertyValue('--progress');
-                    }, index * 100);
-                });
-                skillObserver.unobserve(entry.target);
-            }
-        });
-    },
-    {
-        threshold: 0.5
-    }
-);
-
-const skillsSection = document.querySelector('.skills');
-if (skillsSection) {
-    skillObserver.observe(skillsSection);
-}
-
-// ===================================
 // Active Navigation Link Highlighting
 // ===================================
 
@@ -174,36 +143,6 @@ const highlightNavOnScroll = () => {
 };
 
 window.addEventListener('scroll', highlightNavOnScroll);
-
-// ===================================
-// Project Card Tilt Effect (Desktop Only)
-// ===================================
-
-if (window.innerWidth > 768) {
-    const projectCards = document.querySelectorAll('.project-card');
-
-    projectCards.forEach((card) => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-
-            const rotateX = (y - centerY) / 20;
-            const rotateY = (centerX - x) / 20;
-
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateX(10px)`;
-        });
-
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = '';
-        });
-    });
-}
-
-
 
 // ===================================
 // Keyboard Navigation
@@ -299,11 +238,6 @@ console.log(
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Strona załadowana ✓');
     trackPageView();
-
-    // Set initial skill bar widths to 0 for animation
-    skillBars.forEach((bar) => {
-        bar.style.width = '0';
-    });
 });
 
 // ===================================
