@@ -393,9 +393,9 @@ button {
     background-color: var(--bg-surface);
 }
 
-[data-theme="dark"] .sun-icon { display: none; }
-[data-theme="light"] .moon-icon,
-:root:not([data-theme]) .moon-icon { display: none; }
+[data-theme="dark"] .sun-icon,
+:root:not([data-theme]) .sun-icon { display: none; }
+[data-theme="light"] .moon-icon { display: none; }
 
 /* ===================================
    5. Hero Section
