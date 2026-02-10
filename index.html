@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="lewcode (Marcel Lewandowski) — strony internetowe i aplikacje webowe dla firm. Bydgoszcz i cała Polska. Projekt, wdrożenie, SEO i wsparcie.">
+    <meta name="description" content="lewcode — profesjonalne tworzenie stron internetowych w Bydgoszczy. Strony WWW dla firm, landing page, SEO, copywriting i opieka techniczna. Darmowa wycena w 24h.">
     <meta name="keywords" content="strony internetowe Bydgoszcz, tworzenie stron Bydgoszcz, strona www dla firmy, web developer Bydgoszcz, strony WWW, SEO, landing page, aplikacje webowe">
     <meta name="author" content="Marcel Lewandowski">
 
     <!-- Open Graph -->
     <meta property="og:site_name" content="lewcode">
     <meta property="og:locale" content="pl_PL">
-    <meta property="og:title" content="lewcode — strony WWW i rozwiązania webowe dla firm">
-    <meta property="og:description" content="Strony WWW dla firm, treści marketingowe, SEO i dodatki webowe. Bydgoszcz i cała Polska.">
+    <meta property="og:title" content="lewcode — Strony WWW Bydgoszcz | Tworzenie stron dla firm">
+    <meta property="og:description" content="Profesjonalne tworzenie stron internetowych w Bydgoszczy. Strony WWW dla firm, landing page, SEO i opieka techniczna. Darmowa wycena w 24h.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lewcode.pl/">
     <meta property="og:image" content="https://lewcode.pl/og-image.jpg">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="lewcode — strony WWW i rozwiązania webowe dla firm">
-    <meta name="twitter:description" content="Strony WWW dla firm, SEO i rozwiązania webowe. Bydgoszcz i cała Polska.">
+    <meta name="twitter:title" content="lewcode — Strony WWW Bydgoszcz | Tworzenie stron dla firm">
+    <meta name="twitter:description" content="Profesjonalne tworzenie stron internetowych w Bydgoszczy. Strony WWW dla firm, landing page, SEO i opieka techniczna. Darmowa wycena w 24h.">
     <meta name="twitter:image" content="https://lewcode.pl/og-image.jpg">
 
-    <title>lewcode — strony WWW i rozwiązania webowe dla firm</title>
+    <title>lewcode — Strony WWW Bydgoszcz | Tworzenie stron dla firm</title>
 
     <link rel="canonical" href="https://lewcode.pl/">
 
@@ -42,10 +42,21 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "ProfessionalService",
+          "@type": "LocalBusiness",
           "@id": "https://lewcode.pl/#lewcode",
           "name": "lewcode",
+          "description": "Profesjonalne tworzenie stron internetowych w Bydgoszczy. Strony WWW dla firm, landing page, SEO, copywriting i opieka techniczna.",
           "url": "https://lewcode.pl/",
+          "telephone": "+48570271968",
+          "email": "kontakt@lewcode.pl",
+          "taxID": "5543026420",
+          "image": "https://lewcode.pl/og-image.jpg",
+          "priceRange": "od 1500 PLN",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Bydgoszcz",
+            "addressCountry": "PL"
+          },
           "areaServed": [
             {"@type": "City", "name": "Bydgoszcz"},
             {"@type": "Country", "name": "Polska"}
@@ -56,7 +67,15 @@
             "SEO",
             "copywriting",
             "aplikacje webowe"
-          ]
+          ],
+          "sameAs": [
+            "https://github.com/dovskyy",
+            "https://www.linkedin.com/in/marcel-lew96/"
+          ],
+          "founder": {
+            "@type": "Person",
+            "@id": "https://lewcode.pl/#marcel-lewandowski"
+          }
         },
         {
           "@type": "Person",
@@ -70,7 +89,7 @@
           "url": "https://lewcode.pl/",
           "sameAs": [
             "https://github.com/dovskyy",
-            "https://linkedin.com/in/marcel-lew96"
+            "https://www.linkedin.com/in/marcel-lew96/"
           ]
         }
       ]
@@ -144,7 +163,10 @@
 
             <div class="hero-decoration fade-in-up">
                 <div class="image-wrapper">
-                    <img src="assets/marcel-lewandowski.png" alt="Marcel Lewandowski" class="hero-photo">
+                    <picture>
+                        <source srcset="assets/marcel-lewandowski.webp" type="image/webp">
+                        <img src="assets/marcel-lewandowski.png" alt="Marcel Lewandowski" class="hero-photo">
+                    </picture>
                 </div>
             </div>
         </div>
