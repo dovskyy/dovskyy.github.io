@@ -32,7 +32,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 
@@ -78,6 +78,19 @@
     </script>
 </head>
 <body>
+    <!-- Background Decorations -->
+    <div class="bg-grid-pattern"></div>
+    <div class="decoration-blob blob-1"></div>
+    <div class="decoration-blob blob-2"></div>
+    <div class="decoration-blob blob-3"></div>
+    
+    <!-- Floating Tech Particles -->
+    <div class="tech-particle tp-1">&lt;/&gt;</div>
+    <div class="tech-particle tp-2">{ }</div>
+    <div class="tech-particle tp-3">//</div>
+    <div class="tech-particle tp-4">01</div>
+    <div class="tech-particle tp-5">#</div>
+
     <!-- Navigation -->
     <nav class="nav" id="nav">
         <div class="nav-container">
@@ -187,57 +200,79 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-number">02</span>
-                <h2 class="section-title reveal">Usługi</h2>
+                <h2 class="section-title reveal">Jak mogę Ci pomóc?</h2>
+                <p class="section-subtitle reveal">Dostarczam kompletne rozwiązania, które budują Twój profesjonalny wizerunek i realnie wspierają rozwój Twojego biznesu.</p>
             </div>
             <div class="skills-grid">
-                <div class="skill-category reveal">
-                    <h3 class="skill-category-title">Strony WWW dla firm</h3>
-                    <p class="service-summary">Od prostych landing page po rozbudowane strony ofertowe.</p>
-                    <ul class="service-list">
-                        <li class="service-item">Analiza potrzeb i struktury strony</li>
-                        <li class="service-item">Projektowanie UX i warstwy wizualnej</li>
-                        <li class="service-item">Responsywność i szybkie ładowanie</li>
-                    </ul>
+                <!-- Service 1: Strony WWW -->
+                <div class="skill-card span-2 reveal">
+                    <div class="card-content">
+                        <div class="card-top">
+                            <div class="availability-badge">
+                                <div class="status-dot"></div>
+                                <span>Wolne terminy</span>
+                            </div>
+                        </div>
+                        <h3 class="skill-title">Strony WWW dla firm</h3>
+                        <p class="skill-desc">Od prostych landing page po rozbudowane strony ofertowe.</p>
+                        <ul class="skill-list-simple">
+                            <li>Analiza potrzeb i struktury strony</li>
+                            <li>Projektowanie UX i warstwy wizualnej</li>
+                            <li>Responsywność i szybkie ładowanie</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="skill-category reveal">
-                    <h3 class="skill-category-title">Treści marketingowe</h3>
-                    <p class="service-summary">Teksty, które tłumaczą ofertę i wspierają sprzedaż.</p>
-                    <ul class="service-list">
-                        <li class="service-item">Copywriting na stronę główną i ofertę</li>
-                        <li class="service-item">Struktura treści pod SEO</li>
-                        <li class="service-item">Komunikaty i CTA dopasowane do klienta</li>
-                    </ul>
+                <!-- Service 2: Treści -->
+                <div class="skill-card reveal">
+                    <div class="card-content">
+                        <h3 class="skill-title">Treści marketingowe</h3>
+                        <p class="skill-desc">Teksty, które tłumaczą ofertę i wspierają sprzedaż.</p>
+                        <ul class="skill-list-simple">
+                            <li>Copywriting na stronę główną i ofertę</li>
+                            <li>Struktura treści pod SEO</li>
+                            <li>Komunikaty i CTA dopasowane do klienta</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="skill-category reveal">
-                    <h3 class="skill-category-title">SEO + Wizytówka Google</h3>
-                    <p class="service-summary">Widoczność w wyszukiwarkach i lokalnych wynikach.</p>
-                    <ul class="service-list">
-                        <li class="service-item">Podstawowa optymalizacja techniczna</li>
-                        <li class="service-item">Ustawienie i opis wizytówki Google</li>
-                        <li class="service-item">Rekomendacje kolejnych działań</li>
-                    </ul>
+                <!-- Service 3: SEO -->
+                <div class="skill-card reveal">
+                    <div class="card-content">
+                        <h3 class="skill-title">SEO + Wizytówka Google</h3>
+                        <p class="skill-desc">Widoczność w wyszukiwarkach i lokalnych wynikach.</p>
+                        <ul class="skill-list-simple">
+                            <li>Podstawowa optymalizacja techniczna</li>
+                            <li>Ustawienie i opis wizytówki Google</li>
+                            <li>Rekomendacje kolejnych działań</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="skill-category reveal">
-                    <h3 class="skill-category-title">Aplikacje webowe i dodatki</h3>
-                    <p class="service-summary">Rozbudowane funkcje jako dodatek do strony firmy.</p>
-                    <ul class="service-list">
-                        <li class="service-item">Formularze, panele i integracje</li>
-                        <li class="service-item">Automatyzacje i narzędzia dla zespołu</li>
-                        <li class="service-item">Rozwój po wdrożeniu</li>
-                    </ul>
+                <!-- Service 4: Aplikacje -->
+                <div class="skill-card reveal">
+                    <div class="card-content">
+                        <h3 class="skill-title">Aplikacje webowe i dodatki</h3>
+                        <p class="skill-desc">Rozbudowane funkcje jako dodatek do strony firmy.</p>
+                        <ul class="skill-list-simple">
+                            <li>Formularze, panele i integracje</li>
+                            <li>Automatyzacje i narzędzia dla zespołu</li>
+                            <li>Rozwój po wdrożeniu</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="skill-category reveal">
-                    <h3 class="skill-category-title">Opieka techniczna i rozwój</h3>
-                    <p class="service-summary">Spokój głowy i ciągłe bezpieczeństwo Twojej strony.</p>
-                    <ul class="service-list">
-                        <li class="service-item">6 miesięcy gwarancji technicznej</li>
-                        <li class="service-item">3 miesiące wsparcia i zmian w cenie wdrożenia</li>
-                        <li class="service-item">Aktualizacje zabezpieczeń i kopie zapasowe</li>
-                    </ul>
+                <!-- Service 5: Opieka -->
+                <div class="skill-card reveal">
+                    <div class="card-content">
+                        <h3 class="skill-title">Opieka techniczna i rozwój</h3>
+                        <p class="skill-desc">Spokój głowy i ciągłe bezpieczeństwo Twojej strony.</p>
+                        <ul class="skill-list-simple">
+                            <li>6 miesięcy gwarancji technicznej</li>
+                            <li>3 miesiące wsparcia i zmian w cenie wdrożenia</li>
+                            <li>Aktualizacje zabezpieczeń i kopie zapasowe</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
