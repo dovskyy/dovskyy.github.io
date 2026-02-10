@@ -3,26 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Marcel Lewandowski - strony WWW dla firm, treści marketingowe, SEO, wizytówki Google i dodatki webowe.">
-    <meta name="keywords" content="strony internetowe dla firm, web developer, SEO, treści marketingowe, wizytówka Google, aplikacje webowe">
+    <meta name="description" content="lewcode (Marcel Lewandowski) — strony internetowe i aplikacje webowe dla firm. Bydgoszcz i cała Polska. Projekt, wdrożenie, SEO i wsparcie.">
+    <meta name="keywords" content="strony internetowe Bydgoszcz, tworzenie stron Bydgoszcz, strona www dla firmy, web developer Bydgoszcz, strony WWW, SEO, landing page, aplikacje webowe">
     <meta name="author" content="Marcel Lewandowski">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Marcel Lewandowski - Strony WWW dla firm">
-    <meta property="og:description" content="Strony WWW dla firm, treści marketingowe, SEO i dodatki webowe. Doświadczenie zdobyte w Visa.">
+    <meta property="og:site_name" content="lewcode">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:title" content="lewcode — strony WWW i rozwiązania webowe dla firm">
+    <meta property="og:description" content="Strony WWW dla firm, treści marketingowe, SEO i dodatki webowe. Bydgoszcz i cała Polska.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://dovskyy.me">
-    <meta property="og:image" content="https://dovskyy.me/og-image.jpg">
+    <meta property="og:url" content="https://lewcode.pl/">
+    <meta property="og:image" content="https://lewcode.pl/og-image.jpg">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Marcel Lewandowski - Strony WWW dla firm">
-    <meta name="twitter:description" content="Strony WWW dla firm, treści marketingowe, SEO i dodatki webowe.">
+    <meta name="twitter:title" content="lewcode — strony WWW i rozwiązania webowe dla firm">
+    <meta name="twitter:description" content="Strony WWW dla firm, SEO i rozwiązania webowe. Bydgoszcz i cała Polska.">
+    <meta name="twitter:image" content="https://lewcode.pl/og-image.jpg">
 
-    <title>Marcel Lewandowski - Strony WWW dla firm</title>
+    <title>lewcode — strony WWW i rozwiązania webowe dla firm</title>
+
+    <link rel="canonical" href="https://lewcode.pl/">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>☕</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230b1220'/><text x='50' y='64' text-anchor='middle' font-size='56' font-family='system-ui, -apple-system, Segoe UI, Roboto, Arial' fill='%23ffffff'>&lt;/&gt;</text></svg>">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,24 +40,39 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Marcel Lewandowski",
-      "jobTitle": "Web developer",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Visa"
-      },
-      "url": "https://dovskyy.me",
-      "sameAs": [
-        "https://github.com/dovskyy",
-        "https://linkedin.com/in/marcel-dovsk%C3%BD"
-      ],
-      "knowsAbout": [
-        "strony WWW dla firm",
-        "treści marketingowe",
-        "SEO",
-        "wizytówka Google",
-        "aplikacje webowe"
+      "@graph": [
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://lewcode.pl/#lewcode",
+          "name": "lewcode",
+          "url": "https://lewcode.pl/",
+          "areaServed": [
+            {"@type": "City", "name": "Bydgoszcz"},
+            {"@type": "Country", "name": "Polska"}
+          ],
+          "knowsAbout": [
+            "strony WWW dla firm",
+            "landing page",
+            "SEO",
+            "copywriting",
+            "aplikacje webowe"
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://lewcode.pl/#marcel-lewandowski",
+          "name": "Marcel Lewandowski",
+          "jobTitle": "Web developer",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Visa"
+          },
+          "url": "https://lewcode.pl/",
+          "sameAs": [
+            "https://github.com/dovskyy",
+            "https://linkedin.com/in/marcel-lew96"
+          ]
+        }
       ]
     }
     </script>
@@ -61,7 +81,7 @@
     <!-- Navigation -->
     <nav class="nav" id="nav">
         <div class="nav-container">
-            <a href="#" class="nav-logo">.mldesign</a>
+            <a href="#" class="nav-logo">.lewcode</a>
             <div class="nav-links">
                 <a href="#about" class="nav-link">O mnie</a>
                 <a href="#skills" class="nav-link">Usługi</a>
@@ -111,7 +131,7 @@
 
             <div class="hero-decoration fade-in-up">
                 <div class="image-wrapper">
-                    <img src="assets/marcel-lewandowski.jpg" alt="Marcel Lewandowski" class="hero-photo">
+                    <img src="assets/marcel-lewandowski.png" alt="Marcel Lewandowski" class="hero-photo">
                 </div>
             </div>
         </div>
@@ -492,12 +512,12 @@
                     </p>
                 </div>
                 <div class="contact-links">
-                    <a href="mailto:marcel@dovskyy.me" class="contact-link">
+                    <a href="mailto:kontakt@lewcode.pl" class="contact-link">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                             <polyline points="22,6 12,13 2,6"/>
                         </svg>
-                        <span>marcel@dovskyy.me</span>
+                        <span>kontakt@lewcode.pl</span>
                     </a>
                     <a href="tel:+48570271968" class="contact-link">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -528,7 +548,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">.mldesign</div>
+                <div class="footer-logo">.lewcode</div>
                 <p>&copy; 2026 Marcel Lewandowski. Wszystkie prawa zastrzeżone.</p>
                 <p style="font-size: 0.75rem; margin-top: 1rem; opacity: 0.6;">NIP: 5543026420</p>
             </div>

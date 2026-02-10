@@ -1,12 +1,12 @@
 # Kontekst Projektu: Strona Osobista / Portfolio Web Developer (dovskyy.github.io)
 
 ## Przegląd
-Jest to osobista strona wizytówka i portfolio Marcela Lewandowskiego (.mldesign). Służy do prezentacji oferty tworzenia stron WWW, aplikacji webowych oraz usług marketingowych. Strona zaprojektowana jest w nowoczesnym, minimalistycznym stylu z silnym naciskiem na "inżynierską precyzję" i zaufanie.
+Jest to osobista strona wizytówka i portfolio Marcela Lewandowskiego (.lewcode). Służy do prezentacji oferty tworzenia stron WWW, aplikacji webowych oraz usług marketingowych. Strona zaprojektowana jest w nowoczesnym, minimalistycznym stylu z silnym naciskiem na "inżynierską precyzję" i zaufanie.
 
 ## Autor i Dane
 - **Imię:** Marcel Lewandowski
-- **Marka:** .mldesign
-- **Kontakt:** marcel@dovskyy.me, +48 570 271 968
+- **Marka:** .lewcode
+- **Kontakt:** kontakt@lewcode.pl, +48 570 271 968
 - **Linki:** GitHub (dovskyy), LinkedIn (marcel-lew96)
 - **NIP:** 5543026420
 

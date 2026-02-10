@@ -288,7 +288,7 @@ document.querySelectorAll('a[target="_blank"]').forEach((link) => {
 
 console.log('%c👋 Cześć!', 'font-size: 2em; color: #D4855F; font-weight: bold;');
 console.log(
-    '%cPodglądasz kod? Super!\nTa strona firmowa jest zbudowana w czystym HTML, CSS i JavaScript.\nMasz pytanie lub chcesz współpracować? Napisz: marcel@dovskyy.me',
+    '%cPodglądasz kod? Super!\nTa strona firmowa jest zbudowana w czystym HTML, CSS i JavaScript.\nMasz pytanie lub chcesz współpracować? Napisz: kontakt@lewcode.pl',
     'font-size: 1em; color: #5A5A5A; line-height: 1.5;'
 );
 
