@@ -36,10 +36,40 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e)
 });
 
 // ===================================
-// Navigation Scroll Effect
+// Navigation & Mobile Menu
 // ===================================
 
 const nav = document.getElementById('nav');
+const menuToggle = document.getElementById('menuToggle');
+const navLinksContainer = document.querySelector('.nav-links');
+const navLinks = document.querySelectorAll('.nav-link');
+
+// Toggle Mobile Menu
+menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    navLinksContainer.classList.toggle('active');
+    nav.classList.toggle('menu-open');
+    
+    // Prevent scrolling when menu is open
+    document.body.style.overflow = navLinksContainer.classList.contains('active') ? 'hidden' : '';
+});
+
+// Close menu when clicking a link or clicking outside
+document.addEventListener('click', (e) => {
+    if (navLinksContainer.classList.contains('active') && 
+        !navLinksContainer.contains(e.target) && 
+        !menuToggle.contains(e.target)) {
+        closeMenu();
+    }
+});
+
+function closeMenu() {
+    menuToggle.classList.remove('active');
+    navLinksContainer.classList.remove('active');
+    nav.classList.remove('menu-open');
+    document.body.style.overflow = '';
+}
+
 let lastScrollY = window.scrollY;
 
 window.addEventListener('scroll', () => {
@@ -59,11 +89,15 @@ window.addEventListener('scroll', () => {
 // Smooth Scroll for Navigation Links
 // ===================================
 
-const navLinks = document.querySelectorAll('.nav-link');
-
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
+        
+        // Close mobile menu if open
+        if (navLinksContainer.classList.contains('active')) {
+            closeMenu();
+        }
+
         const targetId = link.getAttribute('href');
 
         if (targetId === '#') {
