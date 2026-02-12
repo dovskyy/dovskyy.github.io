@@ -311,88 +311,96 @@
     <!-- Portfolio Section -->
     <section class="portfolio" id="portfolio">
         <div class="container">
-            <div class="section-header">
-                <span class="section-number">03</span>
-                <h2 class="section-title reveal">Wybrane realizacje</h2>
-                <p class="section-subtitle reveal">Zobacz projekty, które pomogły moim klientom rozwinąć skrzydła w sieci. Każda strona to inna historia i indywidualne podejście.</p>
+            <div class="section-header portfolio-header">
+                <div>
+                    <span class="section-number">03</span>
+                    <h2 class="section-title reveal">Wybrane realizacje</h2>
+                    <p class="section-subtitle reveal">Zobacz projekty, które pomogły moim klientom rozwinąć skrzydła w sieci. Każda strona to inna historia i indywidualne podejście.</p>
+                </div>
+                
+                <div class="slider-nav">
+                    <button class="nav-btn prev-btn" aria-label="Poprzedni projekt">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button class="nav-btn next-btn" aria-label="Następny projekt">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
             </div>
 
-            <div class="portfolio-grid">
-                <!-- Project 1: Klinika Szumowscy -->
-                <article class="portfolio-card reveal">
-                    <div class="portfolio-image">
-                        <div class="device-mockup-container">
-                            <div class="laptop-mockup">
-                                <div class="laptop-screen">
-                                    <img src="assets/klinika-desktop.png" alt="Klinika Szumowscy Desktop">
+            <div class="portfolio-slider-container">
+                <div class="portfolio-grid">
+                    <!-- Project 1: Klinika Szumowscy -->
+                    <article class="portfolio-card reveal">
+                        <div class="portfolio-image">
+                            <div class="device-mockup-container">
+                                <div class="laptop-mockup">
+                                    <div class="laptop-screen">
+                                        <img src="assets/klinika-desktop.png" alt="Klinika Szumowscy Desktop">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="phone-mockup">
-                                <div class="phone-screen">
-                                    <img src="assets/klinika-mobile.png" alt="Klinika Szumowscy Mobile">
+                                <div class="phone-mockup">
+                                    <div class="phone-screen">
+                                        <img src="assets/klinika-mobile.png" alt="Klinika Szumowscy Mobile">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="portfolio-overlay">
-                            <a href="https://lewcode.pl/klinika-szumowscy/" class="btn btn-primary" target="_blank" rel="noopener">Zobacz projekt</a>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">Branża medyczna</span>
+                            <h3 class="portfolio-title">Klinika Stomatologiczna Szumowscy</h3>
+                            <p class="portfolio-desc">Profesjonalna witryna dla nowoczesnej kliniki stomatologicznej. Optymalizacja pod kątem konwersji i budowania zaufania pacjentów.</p>
+                            <a href="https://lewcode.pl/klinika-szumowscy/" class="btn btn-secondary" target="_blank" rel="noopener" style="margin-top: auto;">Zobacz podgląd strony</a>
                         </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <span class="portfolio-category">Strona WWW / Branża medyczna</span>
-                        <h3 class="portfolio-title">Klinika Stomatologiczna Szumowscy</h3>
-                        <p class="portfolio-desc">Profesjonalna witryna dla nowoczesnej kliniki stomatologicznej. Optymalizacja pod kątem konwersji i budowania zaufania pacjentów.</p>
-                        <a href="https://lewcode.pl/klinika-szumowscy/" class="btn btn-secondary" target="_blank" rel="noopener" style="margin-top: auto;">Zobacz podgląd strony</a>
-                    </div>
-                </article>
+                    </article>
 
-                <!-- Project 2: Cafe Moderna -->
-                <article class="portfolio-card reveal">
-                    <div class="portfolio-image">
-                        <div class="device-mockup-container">
-                            <div class="laptop-mockup">
-                                <div class="laptop-screen">
-                                    <img src="assets/cafe-desktop.png" alt="Cafe Moderna Desktop">
+                    <!-- Project 2: Cafe Moderna -->
+                    <article class="portfolio-card reveal">
+                        <div class="portfolio-image">
+                            <div class="device-mockup-container">
+                                <div class="laptop-mockup">
+                                    <div class="laptop-screen">
+                                        <img src="assets/cafe-desktop.png" alt="Cafe Moderna Desktop">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="phone-mockup">
-                                <div class="phone-screen">
-                                    <img src="assets/cafe-mobile.png" alt="Cafe Moderna Mobile">
+                                <div class="phone-mockup">
+                                    <div class="phone-screen">
+                                        <img src="assets/cafe-mobile.png" alt="Cafe Moderna Mobile">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="portfolio-overlay">
-                            <a href="https://lewcode.pl/cafe-moderna/" class="btn btn-primary" target="_blank" rel="noopener">Zobacz podgląd</a>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">Gastronomia</span>
+                            <h3 class="portfolio-title">Cafe Moderna</h3>
+                            <p class="portfolio-desc">Nowoczesna strona wizytówka dla lokalnej kawiarni typu specialty. Minimalistyczny design i wysoka wydajność.</p>
+                            <a href="https://lewcode.pl/cafe-moderna/" class="btn btn-secondary" target="_blank" rel="noopener" style="margin-top: auto;">Zobacz podgląd strony</a>
                         </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <span class="portfolio-category">Strona WWW / Gastronomia</span>
-                        <h3 class="portfolio-title">Cafe Moderna</h3>
-                        <p class="portfolio-desc">Nowoczesna strona wizytówka dla lokalnej kawiarni typu specialty. Minimalistyczny design i wysoka wydajność.</p>
-                        <a href="https://lewcode.pl/cafe-moderna/" class="btn btn-secondary" target="_blank" rel="noopener" style="margin-top: auto;">Zobacz podgląd strony</a>
-                    </div>
-                </article>
+                    </article>
 
-                <!-- Project 3: Placeholder/In Progress -->
-                <article class="portfolio-card reveal">
-                    <div class="portfolio-image">
-                        <div class="device-mockup-container">
-                            <div class="laptop-mockup">
-                                <div class="laptop-screen">
-                                    <img src="assets/marcel-lewandowski.webp" alt="Twój Projekt">
+                    <!-- Project 3: Placeholder/In Progress -->
+                    <article class="portfolio-card reveal">
+                        <div class="portfolio-image">
+                            <div class="device-mockup-container">
+                                <div class="laptop-mockup">
+                                    <div class="laptop-screen">
+                                        <img src="assets/marcel-lewandowski.webp" alt="Twój Projekt">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="portfolio-overlay">
-                            <a href="#contact" class="btn btn-primary">Darmowa wycena</a>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">Twoja branża</span>
+                            <h3 class="portfolio-title">Kolejna realizacja</h3>
+                            <p class="portfolio-desc">Wkrótce pojawi się tutaj kolejny projekt. Pracujemy nad wdrożeniem nowoczesnego sklepu internetowego.</p>
+                            <a href="#contact" class="btn btn-secondary" style="margin-top: auto;">Zapytaj o projekt</a>
                         </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <span class="portfolio-category">Twoja branża</span>
-                        <h3 class="portfolio-title">Kolejna realizacja</h3>
-                        <p class="portfolio-desc">Wkrótce pojawi się tutaj kolejny projekt. Pracujemy nad wdrożeniem nowoczesnego sklepu internetowego.</p>
-                        <a href="#contact" class="btn btn-secondary" style="margin-top: auto;">Zapytaj o projekt</a>
-                    </div>
-                </article>
+                    </article>
+                </div>
             </div>
         </div>
     </section>

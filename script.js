@@ -36,6 +36,48 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e)
 });
 
 // ===================================
+// Portfolio Slider & Focus Effect
+// ===================================
+
+const portfolioGrid = document.querySelector('.portfolio-grid');
+const portfolioCards = document.querySelectorAll('.portfolio-card');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+
+if (portfolioGrid && portfolioCards.length > 0) {
+    // 1. Focus Effect (Intersection Observer)
+    const portfolioObserverOptions = {
+        root: portfolioGrid,
+        threshold: 0.6
+    };
+
+    const portfolioObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-focused');
+            } else {
+                entry.target.classList.remove('is-focused');
+            }
+        });
+    }, portfolioObserverOptions);
+
+    portfolioCards.forEach(card => portfolioObserver.observe(card));
+
+    // 2. Navigation Buttons
+    nextBtn?.addEventListener('click', () => {
+        const gap = parseFloat(getComputedStyle(portfolioGrid).gap) || 0;
+        const cardWidth = portfolioCards[0].offsetWidth + gap;
+        portfolioGrid.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    });
+
+    prevBtn?.addEventListener('click', () => {
+        const gap = parseFloat(getComputedStyle(portfolioGrid).gap) || 0;
+        const cardWidth = portfolioCards[0].offsetWidth + gap;
+        portfolioGrid.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+    });
+}
+
+// ===================================
 // Navigation & Mobile Menu
 // ===================================
 
