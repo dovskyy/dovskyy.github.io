@@ -880,7 +880,251 @@ button {
 /* Usunięcie starych stylów benefit-list-compact */
 
 /* ===================================
-   8. Projects / Process (Timeline)
+   8. Portfolio Section
+   =================================== */
+
+.portfolio {
+    padding: 8rem 0;
+    position: relative;
+}
+
+/* Device Mockups Container */
+.device-mockup-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 1.5rem;
+    background: var(--bg-surface);
+    background: linear-gradient(145deg, var(--bg-surface), var(--bg-body));
+    border-bottom: 1px solid var(--border-light);
+    transition: all 0.3s var(--ease-out);
+}
+
+[data-theme="dark"] .device-mockup-container {
+    background: linear-gradient(145deg, var(--bg-surface), var(--bg-body));
+}
+
+/* Laptop Mockup */
+.laptop-mockup {
+    width: 82%;
+    max-width: 420px;
+    background: linear-gradient(135deg, #475569 0%, #1e293b 100%); /* Deep Graphite Matte */
+    padding: 6px;
+    border-radius: 12px 12px 2px 2px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: transform 0.4s var(--ease-out);
+}
+
+/* Realistyczna podstawa laptopa */
+.laptop-mockup::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: -10%;
+    width: 120%;
+    height: 10px;
+    background: linear-gradient(to bottom, #334155, #0f172a);
+    border-radius: 2px 2px 14px 14px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Detal: Wycięcie na palec do otwierania */
+.laptop-mockup::before {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 4px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 0 0 4px 4px;
+    z-index: 2;
+}
+
+.laptop-screen {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background: #000;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+.laptop-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Phone Mockup */
+.phone-mockup {
+    width: 22%;
+    min-width: 85px;
+    height: auto;
+    aspect-ratio: 9 / 19;
+    background: #000;
+    border: 3px solid #1a1a1a;
+    border-radius: 18px;
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 2;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    overflow: hidden;
+    transition: transform 0.4s var(--ease-out);
+}
+
+.phone-screen {
+    width: 100%;
+    height: 100%;
+    background: #222;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.phone-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Dynamic Island Style */
+.phone-mockup::after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    height: 8px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    z-index: 3;
+}
+
+/* Interactions */
+.portfolio-card:hover .laptop-mockup {
+    transform: translateX(-10px) scale(1.02);
+}
+
+.portfolio-card:hover .phone-mockup {
+    transform: translateY(-10px) scale(1.05);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); /* Nieco szersze karty */
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 500px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.portfolio-card {
+    background: var(--bg-surface);
+    background: linear-gradient(145deg, var(--bg-surface), var(--bg-body));
+    border: 1px solid var(--border-light);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s var(--ease-out);
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px -5px var(--accent-glow);
+    background: linear-gradient(var(--bg-surface), var(--bg-surface)) padding-box,
+                var(--primary-gradient) border-box;
+    border: 1px solid transparent;
+}
+
+.portfolio-image {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s var(--ease-out);
+}
+
+/* Zapobieganie nierównemu skalowaniu wewnątrz mockupów */
+.device-mockup-container img {
+    transform: none !important;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(11, 18, 32, 0.3); /* Znacznie lżejsze przyciemnienie */
+    backdrop-filter: blur(2px); /* Delikatniejszy blur */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-card:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-info {
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-category {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-primary);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.portfolio-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-heading);
+}
+
+.portfolio-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.portfolio-tags {
+    margin-top: auto;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* ===================================
+   9. Projects / Process (Timeline)
    =================================== */
 
 .timeline-section {
