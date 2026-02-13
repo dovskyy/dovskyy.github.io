@@ -927,6 +927,60 @@ button {
     position: relative;
 }
 
+.mobile-scroll-hint {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    margin-bottom: -3.5rem;
+}
+
+.hint-bar {
+    width: 60px;
+    height: 3px;
+    background-color: var(--bg-surface-2);
+    border-radius: 99px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hint-bar-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent-primary);
+    border-radius: 99px;
+    animation: scrollHint 2.5s infinite ease-in-out;
+}
+
+.hint-text {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-tertiary);
+}
+
+@keyframes scrollHint {
+    0% { transform: translateX(-100%); opacity: 0; }
+    30% { opacity: 1; }
+    70% { opacity: 1; }
+    100% { transform: translateX(100%); opacity: 0; }
+}
+
+@media (max-width: 1023px) {
+    .mobile-scroll-hint {
+        display: flex;
+    }
+    
+    .portfolio-slider-container {
+        margin-top: 1rem;
+    }
+}
+
 .portfolio-slider-container {
     position: relative;
     margin-top: 3rem;
