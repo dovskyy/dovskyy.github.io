@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:dovskyy.github.io)",
+      "WebSearch",
+      "Bash(find:*)",
+      "WebFetch(domain:lewcode.pl)"
+    ]
+  }
+}
