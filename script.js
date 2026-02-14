@@ -316,26 +316,27 @@ if (contactForm) {
         submitBtn.textContent = 'Wysyłanie...';
         
         const formData = new FormData(contactForm);
-        
+        const jsonData = Object.fromEntries(formData.entries());
+
         try {
             const response = await fetch(contactForm.action, {
                 method: 'POST',
-                body: formData,
+                body: JSON.stringify(jsonData),
                 headers: {
+                    'Content-Type': 'application/json',
                     'Accept': 'application/json'
                 }
             });
-            
-            if (response.ok) {
-                // Success
+
+            const data = await response.json();
+
+            if (data.success) {
                 contactForm.style.display = 'none';
                 contactSuccess.style.display = 'block';
                 contactForm.reset();
                 trackEvent('Contact Form', 'Submission', 'Success');
             } else {
-                // Error from server
-                const data = await response.json();
-                throw new Error(data.error || 'Wystąpił błąd podczas wysyłania.');
+                throw new Error(data.message || 'Wystąpił błąd podczas wysyłania.');
             }
         } catch (error) {
             console.error('Form error:', error);
